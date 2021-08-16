@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--  指定我们网站当前的页面的编码 utf-8 国际通用编码   gbk--gb2312国内编码 -->
+    <meta charset="UTF-8">
+    <!--X-UA-Compatible标示 IE8识别  优化设置 指的是 让IE8浏览器以edgeIE最高浏览器内核标准进行渲染  IE:6 7 8 9 10 11 edge-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 让网页开启缓存控制策略  浏览器会当前页面进行缓存 缓存的最大时间 3分钟 如果用户第一次访问了这个页面 浏览器就会缓存起来
+    
+    在三分钟 如果用户再次访问该页面 则直接使用浏览器缓存  加快访问页面速度-->
+    <meta http-equiv="Cache-Control" content="max-age=180">
+    <!--  针对苹果移动端设备的设置 移除调苹果手机的状态栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置苹果设备的状态栏为黑色风格 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 苹果设备 如果的网页中出现一连串数字 会识别为手机号 你点击之后拨号  设置telephone=no 禁止识别为手机号  -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- DNS预获取 网页中的资源的域名 浏览器预先缓存起来 下一次访问该资源的 时候  域名就不用再解析了 这样一来 加快访问资源 -->
+    <!-- 360buy.com  jd.com 3.cn-->
+    <!-- 京东图片服务器 页面有很多图片 来自于京东自己的服务器 为了加快图片访问速度 需要 做dns预获取-->
+    <link rel="dns-prefetch" href="//m.360buyimg.com">
+    <!-- hbuilder  subline  有些编辑器 创建html文件的时候并没有带这句话 -->
+    <!--  meta:网站元信息描述标签  设置网站的规则 描述网站的内容-->
+    <!-- 可视区域窗口  让当前的页面的宽度  等于 当前的设备的宽度 -->
+    <!-- 过去没有专门针对移动端的网页开发 一般做法：pc电脑端开发好页面 缩小放置手机上看  各个手机屏幕尺寸为了能够放得下网页 默认尺寸980  移动端IE浏览器 默认尺寸1024 -->
+    <!--  initial-scale=1.0 初始化页面缩放比例为1.0 user-scalable=0禁止用户缩放   viewport-fit=cover 让iphoneX 前刘海移除空白区域-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,viewport-fit=cover">
+    <!-- 给搜索引擎 优化 -->
+    <meta name="description"
+        content="哈哈xie.COM-专业的综合网上购物鞋城，为您提供正品低价的购物选择、优质便捷的服务体验。商品来自全球数十万品牌商家，囊括男鞋,女鞋,儿童鞋,高档鞋,高跟鞋,靴子,滑板鞋,皮鞋,运动鞋,拖鞋等丰富品类，满足各种购物需求。" />
+    <meta name="Keywords" content="网上鞋城,网上商城,男鞋,女鞋,儿童鞋,高档鞋,高跟鞋,靴子,滑板鞋,皮鞋,运动鞋,拖鞋,哈哈" />
+    <title>哈哈鞋城</title>
+    <!-- 引入外部连接 -->
+    <link rel="stylesheet" href="./css/index1.css">
+    <!-- 网站图标 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+        /* html {
+            /* 根字体 要根据当前手机的屏幕宽度变化而变化 */
+        /* font-size: 20px; 
+        } */
+        /* #box {
+            
+            width: 5rem;
+            height: 5rem;
+            background-color: red;
+        } */
+        /* div {
+            float: left;
+            width: 100px;
+            height: 4rem;
+            /* padding: 50px; */
+        /* background-color: red;
+            border: 1px solid black; */
+        /* 盒子大小的计算方式 宽高 计算方式 
+            标准盒模型 content-box计算盒子的宽度/高度的时候 以内容宽度来计算的 （定义的宽度 
+            怪异盒模型IE border-box 计算盒子的宽度/高度的时候以边框位置开始计算 定义的宽度 + padding+border */
+        /* 在移动端用的比较多  */
+        /* box-sizing: border-box;
+        } */
+        /* a {
+            font-size: .7rem;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="wrapper">
+            <a href="javascript:;" class="menu"></a>
+            <div>
+                <i class="jd_logo"></i>
+                <i class="search"></i>
+                <input type="text" placeholder="移动硬盘">
+            </div>
+            <a href="javascript:;" class="login">登录</a>
+        </div>
+    </header>
+    <!-- 轮播图区域 -->
+    <div class="banner">
+        <div class="bg"></div>
+        <ul class="clearfix">
+            <li>
+                <a href="javascript:;"><img src="./img/banner01.dpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="./img/banner02.dpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="./img/banner03.dpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="./img/banner04.dpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="./img/banner05.dpg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="./img/banner06.dpg" alt=""></a>
+            </li>
+        </ul>
+        <ol class="nav clearfix">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <!-- 广告区域 -->
+    <div class="ad">
+        <a href="javascript:;"><img src="./img/ad1.jpg" alt=""></a>
+        <a href="javascript:;">
+            <img src="./img/ad2.jpg" alt="">
+            <img src="./img/ad3.jpg" alt="">
+        </a>
+        <a href="javascript:;"><img src="./img/ad4.jpg" alt=""></a>
+    </div>
+    <!-- 商品分类区域 -->
+    <div class="goods_type clearfix">
+        <div class="wrapper">
+            <div class="left">
+                <a href="javascript:;"><img src="./img/list01.dpg" alt=""><span>京东超市</span></a>
+                <a href="javascript:;"><img src="./img/list02.dpg" alt=""><span>数码电器</span></a>
+                <a href="javascript:;"><img src="./img/list03.dpg" alt=""><span>京东服饰</span></a>
+                <a href="javascript:;"><img src="./img/list04.dpg" alt=""><span>京东生鲜</span></a>
+                <a href="javascript:;"><img src="./img/list05.dpg" alt=""><span>京东到家</span></a>
+                <a href="javascript:;"><img src="./img/list06.dpg" alt=""><span>充值缴费</span></a>
+                <a href="javascript:;"><img src="./img/list07.dpg" alt=""><span>9.9元拼</span></a>
+                <a href="javascript:;"><img src="./img/list08.dpg" alt=""><span>领券</span></a>
+                <a href="javascript:;"><img src="./img/list09.dpg" alt=""><span>领金贴</span></a>
+                <a href="javascript:;"><img src="./img/list10.dpg" alt=""><span>PLUS会员</span></a>
+            </div>
+            <div class="right">
+                <a href="javascript:;"><img src="./img/nav11.png" alt=""><span>京东超市</span></a>
+                <a href="javascript:;"><img src="./img/nav12.png" alt=""><span>数码电器</span></a>
+                <a href="javascript:;"><img src="./img/nav13.png" alt=""><span>京东服饰</span></a>
+                <a href="javascript:;"><img src="./img/nav14.png" alt=""><span>京东生鲜</span></a>
+                <a href="javascript:;"><img src="./img/nav15.png" alt=""><span>京东到家</span></a>
+                <a href="javascript:;"><img src="./img/nav16.png" alt=""><span>充值缴费</span></a>
+                <a href="javascript:;"><img src="./img/nav17.png" alt=""><span>9.9元拼</span></a>
+                <a href="javascript:;"><img src="./img/nav18.png" alt=""><span>领券</span></a>
+                <a href="javascript:;"><img src="./img/nav19.png" alt=""><span>领金贴</span></a>
+                <a href="javascript:;"><img src="./img/nav20.png" alt=""><span>PLUS会员</span></a>
+            </div>
+        </div>
+        <ol class="nav clearfix">
+            <li class="active"></li>
+            <li></li>
+        </ol>
+    </div>
+    <!-- 京东秒杀 -->
+    <section class="jdms">
+        <div class="title clearfix">
+            <h3>京东秒杀</h3>
+            <span>8</span>
+            <div class="time clearfix">
+                <div>00</div>
+                <span>:</span>
+                <div>49</div>
+                <span>:</span>
+                <div>12</div>
+            </div>
+            <a href="javascript:;" class="more">更多秒杀</a>
+        </div>
+        <div class="con">
+            <ul class="clearfix">
+                <li>
+                    <a href="javascript:;"><img src="./img/shop01.dpg" alt=""><span>&yen;22.9</span><i>&yen;29.9</i></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./img/shop02.dpg" alt=""><span>&yen;99</span><i>&yen;178</i></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./img/shop03.dpg" alt=""><span>&yen;9.9</span><i>&yen;13.9</i></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./img/shop04.dpg" alt=""><span>&yen;300</span><i>&yen;334</i></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./img/shop05.dpg" alt=""><span>&yen;19.9</span><i>&yen;59.8</i></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./img/shop06.dpg" alt=""><span>&yen;299</span><i>&yen;439</i></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./img/shop07.dpg" alt=""><span>&yen;18.8</span><i>&yen;39.9</i></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./img/shop08.webp" alt=""><span>&yen;8.8</span><i>&yen;28.9</i></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 商品推荐区域 -->
+    <section class="recommend clearfix">
+        <div>
+            <div class="title">
+                <h3>箱包伴侣</h3>
+                <p>热爱生活，有它相伴！</p>
+            </div>
+            <div class="con">
+                <a href="javascript:;"><img src="./img/pic01.dpg" alt=""></a>
+                <a href="javascript:;"><img src="./img/pic02.dpg" alt=""></a>
+            </div>
+        </div>
+        <div>
+            <div class="title">
+                <h3>程序猿</h3>
+                <p>我的世界你不懂</p>
+            </div>
+            <div class="con">
+                <a href="javascript:;"><img src="./img/pic03.dpg" alt=""></a>
+                <a href="javascript:;"><img src="./img/pic04.dpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+    <!-- 商品列表区域 -->
+    <section class="goods_area clearfix">
+        <div>
+            <a herf="javascript:;">
+                <img src="./img/goods01.webp" alt="">
+                <h3>特步童鞋男儿童运动鞋夏季新款男童女童运动休闲软底舒适透气童鞋跑鞋 粉红-9970 33码（适合脚长20.7CM）</h3>
+                <div>
+                    <span><em>&yen;</em>119</span><i>闪购</i><b>看相似</b></div>
+            </a>
+        </div>
+        <div>
+            <a herf="javascript:;">
+                <img src="./img/goods02.webp" alt="">
+                <h3>
+                    <img src="./img/jdcs.png" alt=""> 兰蔻（LANE)七夕皮革唇膏三支装定制礼盒（口红196+888+278）彩妆套装 明星色号 七夕情人节礼物送女友</h3>
+                <div>
+                    <span><em>&yen;</em>960</span><b>看相似</b></div>
+            </a>
+        </div>
+        <div>
+            <a herf="javascript:;">
+                <img src="./img/goods03.webp" alt="">
+                <h3>喜多美 增压花洒喷头套装淋浴加压大出水家用通用浴室洗澡热水器手持淋蓬单头 3档增压花洒【单头】</h3>
+                <div>
+                    <span><em>&yen;</em>159</span><i>满减</i><b>看相似</b></div>
+            </a>
+        </div>
+        <div>
+            <a herf="javascript:;">
+                <img src="./img/goods01.webp" alt="">
+                <h3>特步童鞋男儿童运动鞋夏季新款男童女童运动休闲软底舒适透气童鞋跑鞋 粉红-9970 33码（适合脚长20.7CM）</h3>
+                <div>
+                    <span><em>&yen;</em>119</span><i>闪购</i><b>看相似</b></div>
+            </a>
+        </div>
+        <div>
+            <a herf="javascript:;">
+                <img src="./img/goods02.webp" alt="">
+                <h3>
+                    <img src="./img/jdcs.png" alt=""> 兰蔻（LANE)七夕皮革唇膏三支装定制礼盒（口红196+888+278）彩妆套装 明星色号 七夕情人节礼物送女友</h3>
+                <div>
+                    <span><em>&yen;</em>960</span><b>看相似</b></div>
+            </a>
+        </div>
+        <div>
+            <a herf="javascript:;">
+                <img src="./img/goods03.webp" alt="">
+                <h3>喜多美 增压花洒喷头套装淋浴加压大出水家用通用浴室洗澡热水器手持淋蓬单头 3档增压花洒【单头】</h3>
+                <div>
+                    <span><em>&yen;</em>159</span><i>满减</i><b>看相似</b></div>
+            </a>
+        </div>
+    </section>
+
+    <div class="tab_bar">
+        <a href="javascript:;"><img src="./img/tab01.png" alt=""></a>
+        <a href="javascript:;"><img src="./img/tab02.png" alt=""></a>
+        <a href="javascript:;"><img src="./img/tab03.png" alt=""></a>
+        <a href="javascript:;"><img src="./img/tab04.png" alt=""></a>
+        <a href="javascript:;"><img src="./img/tab05.png" alt=""></a>
+    </div>
+
+    <a href="javascript:;" class="goTop"></a>
+</body>
+<script>
+    // 获取当前屏幕的宽度
+    var iW = document.documentElement.clientWidth;
+    console.log(iW); // 320  375  414 
+    // 320 基于iphone5 来作为标准计算  
+    // 插件的根字体大小设置 和你的参考标准 要一致  
+    // 设计师给你的设计稿 iphone5  
+    document.querySelector('html').style.fontSize = iW / 16 + 'px';
+    // 不但可以获取标签名  还可以 类  ID  
+    // document.getElementById()
+    // document.getElementsByClassName()
+    // document.getElementsByTagName
+    // console.log(document.querySelector('#abc'));
+    // console.log(document.querySelectorAll('#abc')); //  集合 类数组
+</script>
+<script src="./js/index1.js"></script>
+
+</html>

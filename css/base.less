@@ -1,0 +1,91 @@
+// 做一些基础的样式重置 设置公用设置
+@c: #333;
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+
+  // css3 新属性  为了兼容更多浏览器 旧版的浏览器 需要添加浏览器前缀
+  .prefix(box-sizing, border-box);
+ 
+  // 移动端有些浏览器 对于表单的控件输入框 按钮 默认有一些样式 清除调
+  .prefix(appearance,none)
+  
+}
+
+a {
+  text-decoration: none;
+  color: @c;
+  // 去掉移动端高亮闪烁
+  -webkit-tap-highlight-color: transparent;
+  &:visited {
+    color: @c;
+  }
+  &:hover {
+    color: @c;
+  }
+}
+ul,ol {
+  list-style: none;
+}
+
+body {
+  background-color: #f6f6f6;
+  color: #666;
+  font-size: 14px;
+  font-family: -apple-system,Helvetica,sans-serif;
+  padding-bottom: 2.15rem;
+}
+
+em,i {
+  font-style: normal;
+}
+b,strong {
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input,textarea {
+  outline: none;
+  resize: none;
+}
+img {
+  border: 0;
+}
+
+// 公用样式 清除浮动
+// 定义一个清除浮动的类
+.clearfix {
+  // IE低版本浏览器
+  zoom: 1;
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+  }
+}
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+
+
+//less 混入 能够给新的css3属性自动添加浏览器前缀
+.prefix(@attr,@val){
+  @{attr}: @val;
+  -webkit-@{attr}: @val;
+  -moz-@{attr}: @val;
+  -ms-@{attr}: @val;
+  -o-@{attr}: @val;
+}
+

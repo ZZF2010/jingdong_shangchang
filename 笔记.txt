@@ -1,0 +1,118 @@
+一个综合移动端练习： 京东移动端页面+效果
+
+采用  rem + flex-box （主要适配方式） + 百分比 + 固定像素px  
+     浮动布局 +  定位布局  + css3 + 原生js +  less预编译语言来写css
+
+
+利用 live-server插件（模块）启动你的页面 这样一来  你的代码的更改 就会 自动刷新浏览器 
+
+
+项目传到 git上  推送到  gitee 
+
+css  media query  css媒体查询 -----  典型网站 jquery.com jq官网
+
+京东 淘宝 这类网站 pc一套项目  移动端一套项目 （rem、vw、vh 响应式尺寸） 
+
+
+准备工作：
+  1  移动端开发 主要解决 适配问题 ---  flex-box + rem 
+    1.1 设置 视口 viewport 
+    1.2 rem ----- css-rem 插件 快速把px单位转换为rem 
+    1.3 写项目之前 一般都会有一个基础的样式文件 base.less  reset.less
+        清除标签的默认样式  设置一些公用样式 
+    1.4 less ----> esay-less 把less语法转换为css语法
+    
+ 2  京东首页 html页面 做一个基础的配置 头部设置
+   
+
+分析项目基本结构
+   从整体入手 
+   分析结构  
+
+   头部顶部区域  有点特殊  高度始终不变  宽度会随着手机不同 宽度不同 百分比 + 固定像素px
+      header  固定定位
+        div.warpper
+            a.menu 
+
+            div 
+               i.jd_logo
+               div.line 
+               i.search
+               input 搜索框
+
+            a.login
+
+
+   轮播图区域
+      div.banner
+          ul  
+             li
+               a 
+                 img
+          ol 
+             li 
+
+   
+   广告区域
+      div.ad
+        a*3 
+          img 
+
+
+   商品分类区域
+       div.goods_type
+          a*10
+             img 
+             span 
+             
+   京东秒杀区域
+     section.jdms 
+         div.title
+            h3 
+            span
+            div.time
+               div.hour
+               span
+               div.min
+               span
+               div.sec 
+            a.more 
+         div.con
+            ul 
+               li 
+                  a  
+                    img 
+                    span
+                    i 
+   推荐商品区域
+     div.recommend
+       div
+          div.title
+            h3 
+            p 
+          div.con
+            a*2 
+              img
+       div
+   商品列表区域
+
+
+   底部通栏 
+   div.tab_bar
+     a *5 
+        img 
+
+代码编写
+
+功能：
+  1 顶部背景颜色变化
+
+  2 轮播图效果
+
+  3 商品分类区域的 左右滑动
+
+  4 倒计时
+
+  5 京东秒杀区域的滑动
+
+  6 返回顶部
